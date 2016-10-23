@@ -13,6 +13,9 @@ class Response(object):
     def __repr__(self):
         return "<Response text:%s>" % (self.text)
 
+    def __hash__(self):
+        return hash(self.text)
+
     def __eq__(self, other):
         if not other:
             return False

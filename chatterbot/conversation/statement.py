@@ -26,6 +26,9 @@ class Statement(object):
     def __repr__(self):
         return "<Statement text:%s>" % (self.text)
 
+    def __hash__(self):
+        return hash(self.text)
+
     def __eq__(self, other):
         if not other:
             return False
